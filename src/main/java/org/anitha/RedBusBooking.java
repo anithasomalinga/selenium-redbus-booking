@@ -43,6 +43,7 @@ public class RedBusBooking {
         List<WebElement> searchCategories = wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(searchCategoryLocator, 1));
 
         WebElement locationSelection = searchCategories.get(0);
+        // Chaining of web elements
         By listHeaderLocator = By.xpath(".//div[contains(@class,\"listHeader\")]");
         List<WebElement> locationList = locationSelection.findElements(listHeaderLocator);
 
@@ -95,6 +96,7 @@ public class RedBusBooking {
         }
 
         By busesFrameLocator = By.xpath("//li[contains(@class,\"tupleWrapper\")]");
+        // Chaining of web elements
         By busNameLocator = By.xpath(".//div[contains(@class,\"travelsName\")]");
         By endOfListLocator = By.xpath("//span[contains(@class,\"endText\")]");
 
